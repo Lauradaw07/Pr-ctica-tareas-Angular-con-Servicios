@@ -1,3 +1,14 @@
 input {
     width: 400px !important;
 }
+
+@media (max-width: 600px) {
+    input {
+        width: 300px !important;
+    }
+}
+
+.botonAgregar {
+    background-color: rgba(29, 73, 100, 0.877);
+    color: white;
+}

@@ -11,6 +11,6 @@ export class ModificarTareaComponent {
 
   constructor(private tareasService:TareasService) { }
 
-  @Input() tareas: Tarea[] = [];
+  @Input() tareas: Tarea[] = this.tareasService.tareas;
 
 }

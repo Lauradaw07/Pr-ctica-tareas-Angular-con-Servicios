@@ -33,14 +33,16 @@ export class AgregarTareaComponent {
   constructor(private tareasService:TareasService) { }
 
   agregarTarea() {
-    let id = this.generarID();
-    this.nuevaTarea.id = id;
-    this.tareasService.agregarTarea(this.nuevaTarea);  
-
-    this.nuevaTarea = {
-      id: -1,
-      titulo: "",
-      descripcion: ""
+    if((this.nuevaTarea.titulo != "") && (this.nuevaTarea.descripcion != "")) {
+      let id = this.generarID();
+      this.nuevaTarea.id = id;
+      this.tareasService.agregarTarea(this.nuevaTarea);  
+  
+      this.nuevaTarea = {
+        id: -1,
+        titulo: "",
+        descripcion: ""
+      }
     }
   
   }

@@ -6,6 +6,25 @@ li {
     width: 500px;
 }
 
+.card-body {
+    overflow: auto !important;
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 300px;
+    }
+}
+
+#tituloTarea {
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+}
+
+.descripcionTarea {
+    font-family: 'Alice', serif;
+}
+
 img {
     width: 25px;
 }
