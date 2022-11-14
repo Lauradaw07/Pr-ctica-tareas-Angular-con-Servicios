@@ -14,4 +14,12 @@ export class TareasService {
     
   }
 
+  eliminarTarea(tarea: Tarea) {
+    for(let i = 0; i < this.tareas.length; i++) {
+      if(this.tareas[i].id == tarea.id) {
+        this.tareas.splice(i, 1);
+      }
+    }
+  }
+
 }

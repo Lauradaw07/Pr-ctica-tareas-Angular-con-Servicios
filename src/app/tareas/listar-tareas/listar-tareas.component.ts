@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { TareasService } from '../tareas.service';
 import { Tarea } from '../interfaces/tarea.interface';
 
@@ -12,5 +12,19 @@ export class ListarTareasComponent {
   constructor(private tareasService: TareasService) { }
 
   tareas: Tarea[] = this.tareasService.tareas;
+
+  editarTarea(tarea: Tarea) {
+    console.log('editar',tarea);
+    
+  }
+
+  tacharTarea() {    
+    let descripcion = document.querySelector(".descripcionTarea");
+    descripcion?.classList?.toggle("tachar");
+  }
+
+  eliminarTarea(tarea: Tarea): void {
+    this.tareasService.eliminarTarea(tarea);
+  }
 
 }

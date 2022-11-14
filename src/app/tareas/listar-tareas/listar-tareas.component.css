@@ -5,3 +5,11 @@ li {
 .card {
     width: 500px;
 }
+
+img {
+    width: 25px;
+}
+
+.tachar {
+    text-decoration: line-through;
+}

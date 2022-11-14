@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { TareasService } from '../tareas.service';
+import { Tarea } from '../interfaces/tarea.interface';
 
 @Component({
   selector: 'app-modificar-tarea',
   templateUrl: './modificar-tarea.component.html',
   styleUrls: ['./modificar-tarea.component.css']
 })
-export class ModificarTareaComponent implements OnInit {
+export class ModificarTareaComponent {
 
-  constructor() { }
+  constructor(private tareasService:TareasService) { }
 
-  ngOnInit(): void {
-  }
+  @Input() tareas: Tarea[] = [];
 
 }
